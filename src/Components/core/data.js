@@ -3,7 +3,7 @@ export const list =[
     imageUrl: "https://bit.ly/2Z4KKcF",
   imageAlt: "Rear view of modern home with pool",
  
-  title: "Modern home in city center in the heart of historic Los Angeles",
+  title: "Hans home in city center in the heart of historic Los Angeles",
   },
 
    {
@@ -17,7 +17,7 @@ export const list =[
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKFXnQPm3COQ9nPZiMmbhvfo-sAHvBozV_A&s",
   imageAlt: "Rear view of modern home with pool",
   
-  title: "Modern home in city center in the heart of historic Los Angeles",
+  title: "Good home in city center in the heart of historic Los Angeles",
   
 }
 ]

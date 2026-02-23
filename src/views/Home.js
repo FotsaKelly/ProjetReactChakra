@@ -1,50 +1,59 @@
-import {  Center, Heading, Text } from '@chakra-ui/react'
-import { Flex, Spacer } from "@chakra-ui/react"
-import { Badge, Box, HStack, Icon, Image} from "@chakra-ui/react"
-import { HiStar } from "react-icons/hi"
+import { Center, Heading, SimpleGrid, Box, Button, createSystem, defaultConfig  } from '@chakra-ui/react'
 import React from 'react'
-import { AbsoluteCenter } from "@chakra-ui/react"
-import { Button } from "@chakra-ui/react"
-
 import Demmo from '../Components/core/Demmo'
-
-
-const Demo = () => {
-  return (
-    <Button rounded="3xl" size={{ base: "md", md: "lg" }}>
-      Button
-    </Button>
-  )
-}
+import { list } from '../Components/core/data'
 
 
 
 
 const Home = () => {
-
-  
-
   return (
-    <Box alignItems={'center'}>
-    <Heading textAlign={'center'} mt={30}>
-        Mon site Web
-       </Heading>
+    
+    <Box 
+      minH="100vh" 
+      bgGradient="to-br" 
+      gradientFrom="blue.50" 
+      gradientTo="purple.50"
+      py={10} 
+      px={4}
+    >
+      
+      
+      <Box 
+        maxW="container.xl" 
+        mx="auto" 
+        bg="whiteAlpha.800" 
+       
+        borderRadius="3xl"   
+        p={{ base: 6, md: 10 }} 
+      
+        borderWidth="1px"
+       
+      >
+        
+        <Heading textAlign="center" mb={10} size="2xl" >
+          Mon site Web
+        </Heading>
 
-        <Demmo 
-        image ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKFXnQPm3COQ9nPZiMmbhvfo-sAHvBozV_A&s'
-        imageAlt ='Rear view of modern home with pool'
-        title ='Modern home in city center in the heart of historic Los Angeles' />
-          <Center mt={900}>
-        <Button rounded="3xl" size="lg" colorPalette="blue">
-          Cliquez ici
-        </Button>
-      </Center>
-       
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
+          {list.map((item) => (
+            <Demmo 
+              image={item.imageUrl}
+              imageAlt={item.imageAlt}
+              title={item.title}
+            />
+          ))}
+        </SimpleGrid>
+
+        <Center mt={12}>
+          <Button rounded="full" size="xl" colorPalette="blue" shadow="md">
+            Cliquez ici
+          </Button>
+        </Center>
+
       </Box>
-       )
-       
-       
-  
+    </Box>
+  )
 }
 
 export default Home
