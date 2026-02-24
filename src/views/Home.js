@@ -1,12 +1,18 @@
-import { Center, Heading, SimpleGrid, Box, Button, createSystem, defaultConfig  } from '@chakra-ui/react'
-import React from 'react'
+import { Center, Heading, SimpleGrid, Box, Button, createSystem, defaultConfig, Card, Text  } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import Demmo from '../Components/core/Demmo'
+
 import { list } from '../Components/core/data'
+import Inc from '../Components/core/Inc.js'
+import Formulairee from '../Components/core/Formulairee.js'
+import HomeProduit from './HomeProduit.js'
 
 
 
 
 const Home = () => {
+  
+
   return (
     
     <Box 
@@ -25,7 +31,8 @@ const Home = () => {
         bg="whiteAlpha.800" 
        
         borderRadius="3xl"   
-        p={{ base: 6, md: 10 }} 
+        p={{ base: 6, md: 10 }}
+        minH="3xl"
       
         borderWidth="1px"
        
@@ -38,6 +45,7 @@ const Home = () => {
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
           {list.map((item) => (
             <Demmo 
+              key={item}
               image={item.imageUrl}
               imageAlt={item.imageAlt}
               title={item.title}
@@ -52,6 +60,9 @@ const Home = () => {
         </Center>
 
       </Box>
+      <Inc/>
+      <Formulairee/>
+      <HomeProduit/>
     </Box>
   )
 }

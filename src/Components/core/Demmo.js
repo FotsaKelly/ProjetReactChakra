@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { Flex, Spacer } from "@chakra-ui/react"
 import { Badge, Box, HStack, Icon, Image, Text, createSystem, defaultConfig } from "@chakra-ui/react"
 import { HiStar } from "react-icons/hi"
@@ -33,7 +33,7 @@ return(
             </Text>
 
             <HStack color="fg.muted">
-                hhhh
+                
             </HStack>
             </Box>
         </Box>
